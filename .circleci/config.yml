@@ -18,12 +18,12 @@ test:
   docker:
     - image: circleci/python:3.8.5
   steps:
-    -checkout
-    -restore_cache:
-      key: deps-{{ checksum "requirements.lock" }}
-    -run:
-      command: |
-        python -m unittest -v
+    - checkout
+    - restore_cache:
+        key: deps-{{ checksum "requirements.lock" }}
+    - run:
+        command: |
+          python -m unittest -v
 workflows:
   version: 2
   all:
