@@ -14,3 +14,5 @@ def cli(keyword, message):
 def lgtm(keyword, message):
     with get_image(keyword) as fp:
         save_with_message(fp, message)
+        return None
+
